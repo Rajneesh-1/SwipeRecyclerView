@@ -164,7 +164,8 @@ public abstract class SwipeHelper extends ItemTouchHelper.SimpleCallback {
                 translationX = dX * buffer.size() * BUTTON_WIDTH / itemView.getWidth();
                 Log.d("TAg", "translationX -----> " + translationX);
                 mBackground.setColor(backgroundColor);
-                mBackground.setBounds(1039 + (int)dX, 228, 1050, 372);
+                //mBackground.setBounds(1039 + (int)dX, 228, 1050, 372);
+                mBackground.setBounds(itemView.getRight() + (int)dX, itemView.getTop(), itemView.getRight(), itemView.getBottom());
                 //mBackground.setBounds(50, 40, 60, 30);
                 mBackground.draw(c);
                 drawButtons(c, itemView, buffer, pos, translationX);
